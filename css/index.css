@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #fdf1f1fd;
+  color: #151c29;
+}
+
+a:hover {
+  color: coral;
+}
+
+/* a:visited {
+  color: rgb(78, 76, 76);
+} */

@@ -3,7 +3,7 @@ const thisYear = today.getFullYear();
 
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
-copyright.innerHTML = `Hanna Akhramchuk ${thisYear}`;
+copyright.innerHTML = `Hanna Akhramchuk \u00A9 ${thisYear}`;
 footer.appendChild(copyright);
 
 const skills = [
