@@ -3,7 +3,11 @@ const thisYear = today.getFullYear();
 
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
+ lesson-4-4
 copyright.innerHTML = `Hanna Akhramchuk  \u00A9 ${thisYear}`;
+
+copyright.innerHTML = `Hanna Akhramchuk \u00A9 ${thisYear}`;
+ main
 footer.appendChild(copyright);
 
 const skills = [
@@ -28,6 +32,10 @@ for (i = 0; i < skills.length; i++) {
   console.log(skill);
   skillsList.appendChild(skill);
 }
+ lesson-4-4
+
+
+ main
 const messageForm = document.querySelector("[name='leave_message']");
 console.log(messageForm);
 messageForm.addEventListener("submit", (e) => {
@@ -49,9 +57,14 @@ messageForm.addEventListener("submit", (e) => {
   messageForm.reset();
 
   const removeButton = document.createElement("button");
+ lesson-4-4
   removeButton.innerText = "Remove";
   removeButton.type = "button";
   removeButton.className = "btnRemove";
+
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
+ main
 
   removeButton.addEventListener("click", (e) => {
     const entry = e.target.parentNode;
