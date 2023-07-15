@@ -9,9 +9,9 @@ section {
   padding: 1.2rem;
 }
 
-header {
+/* header {
   background-color: lightgreen;
-}
+} */
 
 .hero {
   background: rgb(23, 11, 59);
@@ -177,6 +177,12 @@ p {
   color: #22094b;
   margin-left: 80px;
 }
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+  list-style-type: disc;
+}
 
 .info {
   display: flex;
@@ -243,7 +249,7 @@ p {
 }
 
 .information a {
-  color: #d750f5;
+  color: rgba(34, 8, 75, 0.797);
 }
 
 a:hover {
@@ -266,7 +272,7 @@ a:hover {
   border-radius: 15px;
 }
 
-.btnRemove {
+.btn-remove {
   background: rgb(245, 244, 248) 17%;
   margin-top: 5px;
   padding: 10px 20px;
@@ -281,7 +287,7 @@ a:hover {
   opacity: 0.5;
 }
 
-.btnRemove:hover {
+.btn-remove:hover {
   opacity: 0.5;
 }
 
