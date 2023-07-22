@@ -1,4 +1,6 @@
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
@@ -7,10 +9,6 @@ section {
   /* border: solid black 2px; */
   /* background-color: rgb(216, 216, 231); */
   padding: 1.2rem;
-}
-
-header {
-  background-color: lightgreen;
 }
 
 .hero {
@@ -24,6 +22,13 @@ header {
   height: 100vh;
   color: rgb(216, 216, 231);
   font-size: 20px;
+}
+
+.hero-main {
+  padding: 1rem 0;
+  margin: 0 auto;
+  max-width: 1024px;
+  /* width: 90vw; */
 }
 
 /* body { */
@@ -61,13 +66,16 @@ this */
     rgba(6, 6, 89, 1) 100%
   ); */
 /* } */
+main {
+  flex-grow: 1;
+}
 
 footer {
   height: 100px;
   background-color: rgb(234, 242, 241);
   font-size: 1.125rem;
   color: rgb(34 8 75);
-  padding-left: 80px;
+  padding-left: 60px;
   padding-top: 30px;
   text-align: center;
 }
@@ -78,11 +86,16 @@ nav {
 }
 
 ul {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex;
+  justify-content: space-between; */
+  /* justify-content: space-around; */
   list-style-type: none;
   align-items: center;
   gap: 2rem;
+}
+
+.hero-small {
+  display: flex;
 }
 
 .avatar {
@@ -119,9 +132,6 @@ a:hover {
   text-decoration: underline;
 }
 
-h1 {
-  margin: 0;
-}
 h2 {
   font-size: 50px;
   font-weight: 600;
@@ -141,6 +151,7 @@ p {
   height: 100%;
   justify-content: space-between;
   align-items: center;
+  margin-top: 90px;
 }
 
 .hero-text h1 {
@@ -148,10 +159,13 @@ p {
   color: rgb(49, 205, 200);
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.3em;
 }
 
 .hero-text {
-  margin-left: 80px;
+  margin-top: 60px;
+  margin-left: 60px;
   margin-bottom: 300px;
 }
 
@@ -160,7 +174,7 @@ p {
 }
 
 .socials {
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 }
 
 .social {
@@ -168,14 +182,22 @@ p {
 }
 
 .information {
-  /* display: flex; */
-  justify-content: space-between;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: space-between; */
   padding-top: 20px;
   padding-right: 20px;
-  /* align-items: center; */
-  /* flex-direction: row; */
+
   color: #22094b;
   margin-left: 80px;
+}
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+  list-style-type: disc;
+  margin-top: auto;
+  margin-bottom: 0px;
 }
 
 .info {
@@ -205,8 +227,8 @@ p {
 .skills-list {
   padding: 0;
   display: block;
-  flex-direction: row;
   gap: 0rem;
+  font: 20px;
 }
 
 .skill {
@@ -216,6 +238,7 @@ p {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   margin-bottom: 0.5rem;
+  font-size: 17px;
 }
 .skill:not(:last-child) {
   margin-right: 0.5rem;
@@ -223,10 +246,6 @@ p {
 
 .cards-container {
   padding: 0;
-  display: block;
-}
-.card:not(:last-child) {
-  margin-bottom: 1rem;
 }
 
 .card {
@@ -234,7 +253,13 @@ p {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  /* flex-grow: 1; */
   padding: 1rem;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .emphasis {
@@ -243,7 +268,7 @@ p {
 }
 
 .information a {
-  color: #d750f5;
+  color: rgba(34, 8, 75, 0.806);
 }
 
 a:hover {
@@ -254,6 +279,41 @@ a:hover {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* .contact {
+  display: flex;
+} */
+
+/* I added this for lessson 4.5 */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.5em;
+}
+
+.form-label {
+  color: #22094bb2;
+  margin-bottom: 0.05rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 40%;
+  /* box-sizing: border-box; */
+  /* display: inline-block; */
+  padding: 0.6rem 0.6rem;
+  margin-right: 1rem;
+  font-family: inherit;
+  font-style: italic;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  /* margin-top: 0px; */
+}
+
+.messages-list {
+  display: block;
 }
 
 .btn {
@@ -266,7 +326,7 @@ a:hover {
   border-radius: 15px;
 }
 
-.btnRemove {
+.btn-remove {
   background: rgb(245, 244, 248) 17%;
   margin-top: 5px;
   padding: 10px 20px;
@@ -281,35 +341,21 @@ a:hover {
   opacity: 0.5;
 }
 
-.btnRemove:hover {
+.btn-remove:hover {
   opacity: 0.5;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 40%;
-  box-sizing: border-box;
-  padding: 0.5rem 0.5rem;
-  display: inline-block;
-  margin-right: 1rem;
-  font-family: inherit;
-  font-style: italic;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.form-label {
-  margin-bottom: 0.25rem;
-  color: #22094bb2;
-}
-
-.messages-list {
-  display: block;
+.information {
+  padding: 1rem 0;
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 90vw;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .card {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -321,6 +367,6 @@ a:hover {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .hero-text h1 {
-    font-size: 95px;
+    font-size: 102px;
   }
 }

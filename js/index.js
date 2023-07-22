@@ -42,7 +42,7 @@ messageForm.addEventListener("submit", (e) => {
   const inputMessage = e.target.usersMessage;
   console.log(inputMessage.value);
 
-  //create new messade
+  //create new message
   const messageSection = document.querySelector("#messages");
   console.log(messageSection);
   const messageList = messageSection.querySelector("ul");
@@ -56,7 +56,7 @@ messageForm.addEventListener("submit", (e) => {
   const removeButton = document.createElement("button");
   removeButton.innerText = "Remove";
   removeButton.type = "button";
-  removeButton.className = "btnRemove";
+  removeButton.className = "btn-remove";
 
   removeButton.addEventListener("click", (e) => {
     const entry = e.target.parentNode;
@@ -65,4 +65,24 @@ messageForm.addEventListener("submit", (e) => {
 
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
+});
+
+//Fetch GitHub Repositories
+const githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/akhhanna20/repos");
+
+githubRequest.send();
+
+githubRequest.addEventListener("load", function () {
+  const repositories = JSON.parse(this.response);
+  console.log(repositories);
+
+  const projectSection = document.getElementById("projects");
+  projectList = projectSection.querySelector("ul");
+  console.log(projectList);
+  for (let i = 0; i < repositories.length; i++) {
+    const project = document.createElement("li");
+    project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+    projectList.appendChild(project);
+  }
 });
