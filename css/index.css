@@ -25,7 +25,7 @@ section {
 }
 
 .hero-main {
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   margin: 0 auto;
   max-width: 1024px;
   /* width: 90vw; */
@@ -71,13 +71,35 @@ main {
 }
 
 footer {
-  height: 100px;
-  background-color: rgb(234, 242, 241);
+  /* background-color: rgb(234, 242, 241); */
+  background: rgb(23, 11, 59);
+  background: linear-gradient(
+    128deg,
+    rgb(19, 8, 57) 17%,
+    rgba(13, 78, 92, 0.999) 59%,
+    rgb(33, 16, 44) 100%
+  );
   font-size: 1.125rem;
-  color: rgb(34 8 75);
-  padding-left: 60px;
-  padding-top: 30px;
+  color: rgb(216, 216, 231);
+  padding-left: 40px;
+}
+.copyright {
+  padding-top: 25px;
+}
+.copyright-socials {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
+  margin: 0 auto;
+}
+
+.socials-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.copyright {
+  color: rgb(216, 216, 231);
 }
 
 nav {
@@ -86,16 +108,14 @@ nav {
 }
 
 ul {
-  /* display: flex;
-  justify-content: space-between; */
-  /* justify-content: space-around; */
   list-style-type: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1.3rem;
 }
 
 .hero-small {
   display: flex;
+  padding-left: 40px;
 }
 
 .avatar {
@@ -165,7 +185,7 @@ p {
 
 .hero-text {
   margin-top: 60px;
-  margin-left: 60px;
+  margin-left: 40px;
   margin-bottom: 300px;
 }
 
@@ -181,16 +201,15 @@ p {
   margin: 20px;
 }
 
-.information {
-  /* display: flex;
+/* .information { */
+/* display: flex;
   flex-direction: column; */
-  /* justify-content: space-between; */
-  padding-top: 20px;
+/* justify-content: space-between; */
+/* padding-top: 20px;
   padding-right: 20px;
-
   color: #22094b;
-  margin-left: 80px;
-}
+  margin-left: 80px; */
+/* } */
 .projects-list {
   display: flex;
   flex-direction: column;
@@ -279,7 +298,7 @@ a:hover {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* .contact {
@@ -309,11 +328,33 @@ a:hover {
   font-style: italic;
   border-radius: 5px;
   margin-bottom: 18px;
-  /* margin-top: 0px; */
 }
 
 .messages-list {
   display: block;
+  padding: 0px;
+}
+.messages-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.messages-item :first-child {
+  flex-grow: 2;
+}
+
+.messages-item :not(:last-child) {
+  margin-right: 5rem;
+}
+
+.messages-item:not(:last-child) {
+  border-bottom: 1px solid #22084bce;
+}
+
+.messages-item p {
+  font-size: 18px;
 }
 
 .btn {
@@ -346,7 +387,7 @@ a:hover {
 }
 
 .information {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   margin: 0 auto;
   max-width: 1024px;
   width: 90vw;
