@@ -15,7 +15,7 @@ const skills = [
   "APIs",
   "HTML, CSS",
   "Git",
-  "Testing, debugging",
+  "Debugging",
   "Communication",
   "Creativity",
   "Time managment",
@@ -40,6 +40,27 @@ messageForm.addEventListener("submit", (e) => {
   console.log(inputName.value);
   const inputEmail = e.target.usersEmail;
   console.log(inputEmail.value);
+
+  let regExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  const emailSection = document.querySelector("#email");
+  const message = emailSection.querySelector("#error");
+
+  if (regExp.test(e.target.usersEmail.value)) {
+    console.log("RegExp res: correct");
+    error.textContent = "";
+  } else {
+    error.textContent = "Please enter a valid E-mail address";
+    error.style.color = "red";
+    //console.log("err");
+
+    // console.log(emailSection);
+
+    // const wrongEmailMessage = "You shoul enter the correct E-mail address!";
+    // console.log(message);
+    // message.innerHTML = "You shoul enter the correct E-mail address!";
+    //emailSection.appendChild(wrongEmailMessage);
+  }
+
   const inputMessage = e.target.usersMessage;
   console.log(inputMessage.value);
 
@@ -50,11 +71,22 @@ messageForm.addEventListener("submit", (e) => {
   console.log(messageList);
   const newMessage = document.createElement("li");
   newMessage.className = "messages-item";
-  newMessage.innerHTML = `<div>
+  // check for missing fields
+  if (!inputName || !inputEmail || !inputMessage) {
+    return (messageSection.style.display = "none");
+  }
+
+  if (regExp.test(e.target.usersEmail.value)) {
+    newMessage.innerHTML = `<div>
   <a href="mailto:${inputEmail.value}">${inputName.value}</a> 
   <p> wrote: <span> ${inputMessage.value} </span></p>
   </div>`;
-
+  } else {
+    console.log("Wrong E-mail");
+  }
+  if (newMessage.innerHTML) {
+    messageSection.style.display = "block";
+  }
   messageForm.reset();
 
   //Create button to remove message
@@ -62,15 +94,29 @@ messageForm.addEventListener("submit", (e) => {
   removeButton.innerText = "Remove";
   removeButton.type = "button";
   removeButton.className = "btn-remove";
-
   removeButton.addEventListener("click", (e) => {
     const entry = e.target.parentNode;
     messageList.removeChild(entry);
   });
 
-  newMessage.appendChild(removeButton);
-  messageList.appendChild(newMessage);
+  if (newMessage.innerHTML) {
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+  }
 });
+
+// function errorMessage() {
+//   const error = document.getElementById("error");
+//   let regExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+//   if (regExp.test(document.querySelector("#email").value)) {
+//     // Changing content and color of content
+//     error.textContent = "Please enter a valid number";
+//     error.style.color = "red";
+//   } else {
+//     error.textContent = "";
+//   }
+// }
 
 //Lesson 6.1: Fetch GitHub Repositories using XMLHttpRequest;
 // const githubRequest = new XMLHttpRequest();

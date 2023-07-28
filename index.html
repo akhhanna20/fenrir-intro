@@ -41,7 +41,7 @@
         <div class="hero-area">
           <div class="hero-text">
             <h1>Hanna Akhramchuk</h1>
-            <p>Front-end developer</p>
+            <p class="animate-charcter">Front-end developer</p>
           </div>
           <div class="socials">
             <div class="social">
@@ -49,8 +49,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#ffffff"
-                  width="50"
-                  height="50"
+                  width="45"
+                  height="45"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -64,8 +64,8 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#ffffff"
-                  width="50"
-                  height="50"
+                  width="45"
+                  height="45"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -150,7 +150,7 @@
 
       <div class="information">
         <section id="contact">
-          <h3>Social media</h3>
+          <h2>Social media</h2>
           <a href="https://github.com/akhhanna20">my GitHub</a>
           |
           <a href="https://www.codewars.com/users/akhhanna" target="_blank"
@@ -159,7 +159,7 @@
         </section>
 
         <section id="contact">
-          <h3>Leave a Message</h3>
+          <h2>Leave a Message</h2>
           <form name="leave_message">
             <div class="form-group">
               <label class="form-label">Name:</label><br />
@@ -171,13 +171,14 @@
               />
               <br />
 
-              <label class="form-label">E-mail:</label><br />
+              <label class="form-label" id="email">E-mail:</label><br />
               <input
                 type-="email"
                 name="usersEmail"
                 placeholder="Type your e-mail"
                 required
               />
+              <span id="error"></span>
               <br />
 
               <label class="form-label">Your message:</label><br />
@@ -193,8 +194,8 @@
           </form>
         </section>
 
-        <section id="messages" style="display: block">
-          <h3>Messages</h3>
+        <section id="messages" style="display: none">
+          <h2>Messages</h2>
           <ul class="messages-list information">
             <!-- HTML will be inserted here via JS -->
           </ul>
