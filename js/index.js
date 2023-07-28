@@ -97,7 +97,6 @@ messageForm.addEventListener("submit", (e) => {
   removeButton.className = "btn-remove";
   removeButton.addEventListener("click", (e) => {
     const entry = e.target.parentNode;
-    console.log("here", entry);
 
     //Check for messages section list
     const list = entry.parentNode;
