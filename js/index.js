@@ -41,9 +41,9 @@ messageForm.addEventListener("submit", (e) => {
   const inputEmail = e.target.usersEmail;
   console.log(inputEmail.value);
 
-  let regExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  const regExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   const emailSection = document.querySelector("#email");
-  const message = emailSection.querySelector("#error");
+  // const message = emailSection.querySelector("#error");
 
   if (regExp.test(e.target.usersEmail.value)) {
     console.log("RegExp res: correct");
@@ -71,6 +71,7 @@ messageForm.addEventListener("submit", (e) => {
   console.log(messageList);
   const newMessage = document.createElement("li");
   newMessage.className = "messages-item";
+
   // check for missing fields
   if (!inputName || !inputEmail || !inputMessage) {
     return (messageSection.style.display = "none");
@@ -96,6 +97,13 @@ messageForm.addEventListener("submit", (e) => {
   removeButton.className = "btn-remove";
   removeButton.addEventListener("click", (e) => {
     const entry = e.target.parentNode;
+    console.log("here", entry);
+
+    //Check for messages section list
+    const list = entry.parentNode;
+    if (list.children.length <= 1) {
+      messageSection.style.display = "none";
+    }
     messageList.removeChild(entry);
   });
 
