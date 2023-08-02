@@ -5,113 +5,8 @@ body {
   margin: 0;
 }
 
-/* main {
-  background-color: rgba(13, 78, 92, 0.164);
-} */
-
-section {
-  /* border: solid black 2px; */
-  /* background-color: rgb(216, 216, 231); */
-  padding: 1.2rem;
-  /* display: flex;
-  flex-direction: column; */
-}
-
-#error {
-  font-size: 15px;
-  margin-top: 0px;
-  margin-bottom: 15px;
-  font-style: italic;
-}
-
-.hero {
-  background: rgb(23, 11, 59);
-  background: linear-gradient(
-    128deg,
-    rgb(19, 8, 57) 17%,
-    rgba(13, 78, 92, 0.999) 59%,
-    rgb(33, 16, 44) 100%
-  );
-  height: 100vh;
-  color: rgb(216, 216, 231);
-  font-size: 20px;
-}
-
-.hero-main {
-  /* padding: 1rem 0; */
-  margin: 0 auto;
-  max-width: 1024px;
-  /* width: 90vw; */
-}
-
-.animate-charcter {
-  text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 3s linear infinite;
-  display: inline-block;
-  font-size: 190px;
-}
-
-@keyframes textclip {
-  to {
-    background-position: -200% center;
-  }
-}
-
-/* body { */
-/* box-sizing: border-box;
-   background-color: #fbecf0;
-  background-image: linear-gradient(0deg, #fbeaf0 0%, #9ad3ba 120%); */
-
-/* background-color: #fff7f4; */
-/* background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  ); */
-
-/* this was
-  font-family: "Nunito Sans", sans-serif;
-  color: rgb(233, 233, 249);
-this */
-
-/* color: rgb(246, 246, 250); */
-/* color: rgb(39, 39, 40); */
-
-/* this was
-  font-size: 18px;
-  letter-spacing: 0.6px;
-  font-weight: normal;
-  margin-left: 25px; */
-
-/* background: rgb(238, 174, 202);
-  background: linear-gradient(
-    153deg,
-    rgba(238, 174, 202, 1) 19%,
-    rgba(148, 187, 233, 1) 69%,
-    rgba(6, 6, 89, 1) 100%
-  ); */
-/* } */
-main {
-  flex-grow: 1;
-}
-
+/* Layout and Style of footer */
 footer {
-  /* background-color: rgb(234, 242, 241); */
   background: rgb(23, 11, 59);
   background: linear-gradient(
     128deg,
@@ -134,7 +29,6 @@ footer {
   text-align: center;
   margin: 0 auto;
 }
-
 .socials-footer {
   display: flex;
   flex-direction: row;
@@ -144,55 +38,8 @@ footer {
   color: rgb(216, 216, 231);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-ul {
-  list-style-type: none;
-  /* align-items: center; */
-  gap: 1.3rem;
-}
-
-.hero-small {
-  display: flex;
-  padding-left: 40px;
-  align-items: center;
-}
-
-.avatar {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 80%;
-  box-shadow: 0px 0px 20px 5px rgba(10, 163, 158, 0.728);
-  display: inline-block;
-}
-
-.header__menu {
-  padding: 20px;
-  align-items: center;
-  list-style: none;
-  font-size: 1.3rem;
-  display: none;
-}
-
-.header__link {
-  font-size: 1.2rem;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-a {
-  color: rgb(233, 233, 249);
-  transition: color 0.4s;
-}
-
-a:hover {
-  color: rgba(246, 32, 96, 0.842);
-  font-size: 1.3rem;
-  text-decoration: underline;
+section {
+  padding: 1.2rem;
 }
 
 h2 {
@@ -202,15 +49,113 @@ h2 {
   margin-bottom: 18px;
   margin-top: auto;
   color: #22094b;
-  /* text-shadow: rgba(13, 78, 92, 0.43) 3px 5px 2px; */
-  /* rgba(13, 78, 92, 0.469), 5px 7px 7px #aba8a8; */
+  text-shadow: rgb(13 37 92 / 19%) 3px 5px 2px;
 }
 
 p {
   margin: 0;
   margin-left: 5px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
+}
+
+/* Error message for incorrect e-mail, section "Leave a message"*/
+#error {
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Styling first page */
+.hero {
+  background: rgb(23, 11, 59);
+  background: linear-gradient(
+    128deg,
+    rgb(19, 8, 57) 17%,
+    rgba(13, 78, 92, 0.999) 59%,
+    rgb(33, 16, 44) 100%
+  );
+  height: 100vh;
+  color: rgb(216, 216, 231);
+  font-size: 20px;
+}
+.hero-main {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+/* Animation for text on the first page */
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 35%,
+    #55107a 45%,
+    #3cd28fe8 65%,
+    #ffbf00cc 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+  font-size: 190px;
+}
+@keyframes textclip {
+  to {
+    background-position: -200% center;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  list-style-type: none;
+  gap: 1.3rem;
+}
+
+/* Styling and layout the first page*/
+.hero-small {
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+}
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 80%;
+  box-shadow: 0px 0px 20px 5px rgba(10, 163, 158, 0.728);
+  display: inline-block;
+}
+.header__menu {
+  padding: 20px;
+  align-items: center;
+  list-style: none;
+  font-size: 1.3rem;
+  display: none;
+}
+.header__link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+/* Styling links on the first page */
+a {
+  color: rgb(233, 233, 249);
+  transition: color 0.3s;
+}
+a:hover {
+  color: rgb(196, 77, 251);
+  text-decoration: none;
 }
 
 .hero-area {
@@ -229,6 +174,11 @@ p {
   margin-bottom: 20px;
   line-height: 1.3em;
 }
+.rise {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #321f5d00;
+  text-shadow: 7px 8px 0px rgb(61 26 84 / 72%), 20px 16px 7px #0e0220;
+}
 
 .hero-text {
   margin-top: 60px;
@@ -243,27 +193,12 @@ p {
 .socials {
   margin-bottom: 200px;
 }
-
 .social {
   margin: 20px;
 }
 
-/* .information { */
-/* display: flex;
-  flex-direction: column; */
-/* justify-content: space-between; */
-/* padding-top: 20px;
-  padding-right: 20px;
-  color: #22094b;
-  margin-left: 80px; */
-/* } */
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  display: inline-block;
-  list-style-type: disc;
-  margin-top: auto;
-  margin-bottom: 0px;
+main {
+  flex-grow: 1;
 }
 
 .info {
@@ -271,23 +206,28 @@ p {
   color: #22094b;
 }
 
+#about {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  margin-right: 20px;
+  line-height: 1.5em;
+  gap: 0.5rem;
+}
+
 .avatar-big {
-  width: 300px;
+  width: 180px;
   border-radius: 180px;
 }
 
 .avatar-big-container {
   display: flex;
   align-items: center;
+  padding-top: 10px;
 }
 
 .skills {
-  /* display: flex; */
   border-radius: 16px;
-  color: #22094b;
-}
-
-.bg-mint {
   color: #22094b;
 }
 
@@ -295,8 +235,8 @@ p {
   flex-wrap: wrap;
   display: flex;
   padding: 0;
-  /* display: block; */
   gap: 0rem;
+  margin-bottom: 0px;
   font: 20px;
   max-width: 1024px;
 }
@@ -304,7 +244,7 @@ p {
 .skill {
   border: 2px solid rgb(196, 77, 251);
   color: rgb(196, 77, 251);
-  border-radius: 5px;
+  border-radius: 9px;
   display: inline-block;
   padding: 0.25rem 0.75rem;
   margin-bottom: 0.5rem;
@@ -314,13 +254,23 @@ p {
   margin-right: 0.5rem;
 }
 
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+  list-style-type: disc;
+  margin-top: auto;
+  margin-bottom: 0px;
+}
+
+/* Layout and styling for Experience section */
 .cards-container {
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-bottom: 0px;
 }
-
 .card {
   background-color: rgb(234, 242, 241);
   border-radius: 5px;
@@ -330,60 +280,47 @@ p {
   padding: 1rem;
   color: #22094b;
 }
-
 .card:not(:last-child) {
   margin-bottom: 1rem;
 }
-
 .emphasis {
   color: #22094bc9;
   font-style: italic;
 }
 
+/* Links for "Project", "Social media" and "Messages" sections  */
 .information a {
   color: rgba(34, 8, 75, 0.806);
+  text-decoration: none;
+}
+.information a:hover {
+  text-decoration: underline;
+  color: rgba(12, 3, 26, 0.957);
 }
 
-a:hover {
-  color: rgba(246, 32, 96, 0.842);
-}
-
-.information h3 {
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  margin-top: 5px;
-}
-
-/* .contact {
-  display: flex;
-} */
-
-/* I added this for lessson 4.5 */
+/* Layout for "Leave a message" section */
 .form-group {
   display: flex;
   flex-direction: column;
   line-height: 0.5em;
+  margin-bottom: 12px;
 }
-
 .form-label {
   color: #22094bb2;
   margin-bottom: 0.05rem;
 }
-
 .form-group input,
 .form-group textarea {
   width: 80%;
-  /* box-sizing: border-box; */
-  /* display: inline-block; */
   padding: 0.6rem 0.6rem;
   margin-right: 1rem;
   font-family: inherit;
   font-style: italic;
-  border-radius: 5px;
-  margin-bottom: 18px;
+  border-radius: 9px;
+  margin-bottom: 8px;
 }
 
+/* Layout and styling "Messages" section */
 .messages-list {
   display: block;
   padding: 0px;
@@ -394,23 +331,20 @@ a:hover {
   justify-content: space-between;
   padding: 1rem 0;
 }
-
 .messages-item :first-child {
   flex-grow: 2;
 }
-
 .messages-item :not(:last-child) {
   margin-right: 5rem;
 }
-
 .messages-item:not(:last-child) {
   border-bottom: 1px solid #22084bce;
 }
-
 .messages-item p {
   font-size: 18px;
 }
 
+/* Button 'Submit' */
 .btn {
   background: rgb(19, 8, 57) 17%;
   padding: 15px 20px;
@@ -420,28 +354,26 @@ a:hover {
   font-size: medium;
   border-radius: 15px;
 }
+.btn:hover {
+  opacity: 0.5;
+}
 
+/* Button "Remove" */
 .btn-remove {
   background: rgb(245, 244, 248) 17%;
   margin-top: 5px;
   padding: 10px 20px;
-  color: #f01d1d;
+  color: rgba(246, 32, 96, 0.842);
   font-family: inherit;
   cursor: pointer;
   font-size: medium;
   border-radius: 15px;
 }
-
-.btn:hover {
-  opacity: 0.5;
-}
-
 .btn-remove:hover {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .information {
-  padding: 0.5rem 0;
   margin: 0 auto;
   max-width: 1024px;
   width: 90vw;
@@ -453,7 +385,7 @@ a:hover {
     font-size: 102px;
   }
   .form-group {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -467,11 +399,7 @@ a:hover {
   .header__menu {
     display: flex;
   }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
-  .hero-text h1 {
-    font-size: 102px;
+  .avatar-big {
+    width: 290px;
   }
-} */
+}

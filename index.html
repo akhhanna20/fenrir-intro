@@ -7,7 +7,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <title>Portfolio</title>
     <meta charset="UTF-8" />
     <meta name="author" content="Hanna Akhramchuk" />
@@ -16,13 +15,14 @@
   </head>
 
   <body>
+    <!-- First page -->
     <header class="hero">
       <div class="hero-main">
         <nav>
           <ul class="hero-small">
             <li>
               <img
-                src="/css/myPhoto.jpg"
+                src="./css/myPhoto.jpg"
                 alt="Profile picture"
                 class="avatar"
               />
@@ -40,7 +40,7 @@
         </nav>
         <div class="hero-area">
           <div class="hero-text">
-            <h1>Hanna Akhramchuk</h1>
+            <h1 class="rise">Hanna Akhramchuk</h1>
             <p class="animate-charcter">Front-end developer</p>
           </div>
           <div class="socials">
@@ -80,6 +80,7 @@
     </header>
 
     <main>
+      <!-- Section "About" -->
       <div class="information">
         <div class="info">
           <section id="about">
@@ -88,27 +89,27 @@
               Hello, I am Hanna👋. I am a <strong>front-end developer.</strong>
             </p>
             <p>
-              I graduated in Economics and have a passion and interest for the
-              new technologies.
+              I graduated in Economics and have a passion and interest for new
+              technologies.
             </p>
 
             <p>
               People who know me say I'm obsessed, that's fair, I am very driven
               and love learning new things.
             </p>
-            <!-- </p> -->
             <p>
-              I am good in prioritizing and completing tasks with efficiency and
+              I am good at prioritizing and completing tasks with efficiency and
               accuracy.
             </p>
           </section>
 
           <div class="avatar-big-container">
-            <img class="avatar-big" src="/css/myPhoto.jpg" alt="Image" />
+            <img class="avatar-big" src="./css/myPhoto.jpg" alt="Image" />
           </div>
         </div>
       </div>
 
+      <!-- Section "Skills" -->
       <div class="information">
         <div class="skills">
           <section id="skills">
@@ -119,14 +120,18 @@
           </section>
         </div>
 
+        <!-- Section "Project" -->
         <div>
           <section id="projects">
             <h2>Projects</h2>
-            <ul class="projects-list"></ul>
+            <ul class="projects-list">
+              <!-- HTML will be inserted here via JS-->
+            </ul>
           </section>
         </div>
       </div>
 
+      <!-- Section "Experience" -->
       <div class="information">
         <section id="experience">
           <h2>Experience</h2>
@@ -148,16 +153,18 @@
         </section>
       </div>
 
+      <!-- Section Social media -->
       <div class="information">
         <section id="contact">
           <h2>Social media</h2>
-          <a href="https://github.com/akhhanna20">my GitHub</a>
+          <a href="https://github.com/akhhanna20">GitHub</a>
           |
           <a href="https://www.codewars.com/users/akhhanna" target="_blank"
             >Codewars</a
           >
         </section>
 
+        <!-- Section "Leave a message" -->
         <section id="contact">
           <h2>Leave a Message</h2>
           <form name="leave_message">
@@ -189,20 +196,19 @@
               ></textarea>
               <br />
             </div>
-
             <button class="btn" type="submit">Submit</button>
           </form>
         </section>
 
+        <!-- Section "Messages" -->
         <section id="messages" style="display: none">
           <h2>Messages</h2>
           <ul class="messages-list information">
             <!-- HTML will be inserted here via JS -->
           </ul>
         </section>
-      </div>
     </main>
-
+    
     <footer>
       <div class="copyright-socials information">
         <div class="copyright">
@@ -211,7 +217,6 @@
           </p>
         </div>
 
-        <!-- <div class="socials-footer"> -->
         <ul class="socials-footer">
           <li class="social-footer">
             <a href="https://linkedin.com/in/hanna-akhramchuk-3a9087201">
@@ -245,13 +250,8 @@
             </a>
           </li>
         </ul>
-        <!-- </div> -->
       </div>
-
-      <!-- </div> -->
-      <!-- </div> -->
     </footer>
-
     <script src="js/index.js"></script>
   </body>
 </html>
